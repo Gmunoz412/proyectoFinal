@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "firestone-grafica-be03c": {
+      "hosting": {
+        "goty": [
+          "firestone-grafica-be03c"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "firestone-grafica-be03c"
+  }
+}
