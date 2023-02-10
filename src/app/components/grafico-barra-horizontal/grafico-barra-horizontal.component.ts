@@ -8,7 +8,8 @@ import { NgxChartsModule } from '@swimlane/ngx-charts'
   templateUrl: './grafico-barra-horizontal.component.html',
   styleUrls: ['./grafico-barra-horizontal.component.css']
 })
-export class GraficoBarraHorizontalComponent implements OnDestroy {
+export class GraficoBarraHorizontalComponent  {
+  //imlements on destroy
   results: any[] = [
     {
       "name": "Juego 1",
@@ -41,24 +42,24 @@ export class GraficoBarraHorizontalComponent implements OnDestroy {
   yAxisLabel = 'Votos';
 
   colorScheme = 'nightLights';
-  intervalo;
+  // intervalo;
 
   constructor() {
 
 
-    this.intervalo = setInterval(()=>{
-      console.log('tick');
-      const newResults = [...this.results];
-      for(let i in newResults)
-      {
-        this.results[i].value = Math.round(Math.random() *500);
-      }
-      this.results = [...newResults];
-    },1500);
+    // this.intervalo = setInterval(()=>{
+    //   console.log('tick');
+    //   const newResults = [...this.results];
+    //   for(let i in newResults)
+    //   {
+    //     this.results[i].value = Math.round(Math.random() *500);
+    //   }
+    //   this.results = [...newResults];
+    // },1500);
   }
-  ngOnDestroy(): void {
-    clearInterval(this.intervalo)
-  }
+  // ngOnDestroy(): void {
+  //   clearInterval(this.intervalo)
+  // }
 
   onSelect(event: any) {
     console.log(event);
